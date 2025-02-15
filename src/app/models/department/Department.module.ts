@@ -1,4 +1,4 @@
-import { Seller } from "./Seller.module";
+import { Seller } from "../seller/Seller.module";
 
 export interface Department {
     id: string;

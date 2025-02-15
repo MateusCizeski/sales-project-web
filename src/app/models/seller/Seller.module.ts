@@ -1,5 +1,5 @@
-import { Department } from "./Department.module";
-import { SalesRecord } from "./SalesRecord.module";
+import { Department } from "../department/Department.module";
+import { SalesRecord } from "../salesrecord/SalesRecord.module";
 
 export interface Seller {
     id: string;

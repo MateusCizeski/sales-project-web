@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Department } from '../models/Department.module';
+import { Department } from '../models/department/Department.module';
 
 @Injectable({
-    providedIn: 'root',
-})
-
-export class DepartmentService {
-    private baseUrl = 'http://localhost:3000/sales'
-    
-    constructor(private http: HttpClient) { }
-
-    getSalesRecords(): Observable<Department[]> {}
-}
+    providedIn: 'root'
+  })
+  export class DepartmentService {
+    private apiUrl = 'http://localhost:3000/departments';
+  
+    constructor(private http: HttpClient) {}
+  
+    getDepartments(): Observable<Department[]> {
+      return this.http.get<Department[]>(this.apiUrl);
+    }
+  }
